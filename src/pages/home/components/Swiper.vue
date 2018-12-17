@@ -5,9 +5,6 @@
     <swiper-slide v-for="item in swiperList" :key='item.id'>
         <img class='swiper-img' :src="item.imgUrl" alt="">
     </swiper-slide>
-    <!-- <swiper-slide>
-        <img class='swiper-img' src="http://img1.qunarzz.com/piao/fusion/1811/7c/8e5c4ab8ee8b7402.jpg_750x200_dd7a38dd.jpg" alt="">
-    </swiper-slide> -->
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
     <!-- <div class="swiper-button-prev" slot="button-prev"></div>
@@ -29,6 +26,7 @@ export default {
           // ...
           pagination:'.swiper-pagination',
           loop:true
+        //   autoplay : 3000
         },
         swiperList:[
             {
@@ -50,9 +48,13 @@ export default {
 .wrapper >>> .swiper-pagination-bullet-active
        background :#fff
  .wrapper
-   
+   overflow: hidden;
+   height :0;
+   padding-bottom : 26.67%;
+   background :#eee;
   .swiper-img
     width : 100%
+    
 </style>
 
 
