@@ -58,10 +58,6 @@ export default {
           id:'008',
           imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
           desc:'北京必游'
-        },{
-          id:'009',
-          imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc:'景点门票'
         }
         ]
       }
