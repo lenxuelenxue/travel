@@ -32,9 +32,6 @@ import BScroll from 'better-scroll'
 export default {
     name:'CityList',
     mounted(){
-        // this.$nextTick(()=>{
-        //    this.scroll=new BScroll(this.$refs.wrapper)
-        // })
         this.scroll=new BScroll(this.$refs.wrapper)
     },
     props:{
