@@ -6,7 +6,7 @@
     </div>
     <div class="search-content" ref='wrapper' v-show="keyword">
        <ul>
-           <li class='search-item border-bottom' v-for="item in list" :key='item.id'>{{item.name}}</li>
+           <li class='search-item border-bottom' v-for="item in list" :key='item.id' @click="handleCityClick(item.name)">{{item.name}}</li>
            <li class='search-item border-bottom' v-show="hasNoData">没有找到匹配数据</li>
        </ul>
     </div>
@@ -36,6 +36,13 @@ export default {
     props:{
         cities:Object
         
+    },
+    methods:{
+        handleCityClick(city){
+          // this.$store.dispatch('changeCity',city)
+          this.$store.commit('changeC',city)
+          this.$router.push('/')
+      }
     },
     watch:{
         keyword(){
