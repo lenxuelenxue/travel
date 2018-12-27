@@ -8,13 +8,17 @@
           <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span>{{imgs.length}}</div>
       </div>
     </div>
-    <CommonGallary :imgs="imgs" v-show="showGallary" @click.native='hideGallary'></CommonGallary>
+    <Fade>
+      <CommonGallary :imgs="imgs" v-show="showGallary" @click.native='hideGallary'></CommonGallary>
+    </Fade>
+    
   </div>
     
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import Fade from 'common/fade/Fade'
 export default {
     name:'DetailBanner',
     props:{
@@ -37,7 +41,8 @@ export default {
          }
     },
     components:{
-        CommonGallary
+        CommonGallary,
+        Fade
     }
 }
 </script>
