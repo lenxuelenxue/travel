@@ -2,10 +2,10 @@
   <div>
     <div class="banner" @click='show'>
       <img class="banner-img"
-      src="//img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_600x330_682f736a.jpg" alt="">
+      :src="bannerImg" alt="">
       <div class="banner-info">
-          <div class="banner-title">水奥雪世界</div>
-          <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span>39</div>
+          <div class="banner-title">{{sightName}}</div>
+          <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span>{{imgs.length}}</div>
       </div>
     </div>
     <CommonGallary :imgs="imgs" v-show="showGallary" @click.native='hideGallary'></CommonGallary>
@@ -17,9 +17,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
     name:'DetailBanner',
+    props:{
+        bannerImg:String,
+        imgs:Array,
+        sightName:String
+    },
     data(){
        return {
-           imgs:['http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_600x330_682f736a.jpg','http://img1.qunarzz.com/sight/p0/1712/71/71ace1aa7d971212a3.water.jpg_600x330_5ff0b4e8.jpg'],
+        //    imgs:['http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_600x330_682f736a.jpg','http://img1.qunarzz.com/sight/p0/1712/71/71ace1aa7d971212a3.water.jpg_600x330_5ff0b4e8.jpg'],
            showGallary:false
        }
     },
